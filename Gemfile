@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'sqlite3', '1.3.13'
   # Use Puma as the app server
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -52,8 +52,8 @@ group :development do
 end
 
 group :test do
-  gem 'rails-controller-testing'
-  gem 'minitest'
+  gem 'rails-controller-testing', '< 1.0.5'
+  gem 'minitest', '5.13.0'
   gem 'minitest-reporters'
   gem 'guard'
   gem 'guard-minitest'
@@ -65,7 +65,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '>= 0.18', '< 2.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
